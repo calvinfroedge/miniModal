@@ -1,0 +1,35 @@
+#overlay {
+	position:fixed;
+	min-height:100%;
+	width:100%;
+	background:#000;
+	z-index:1000000;
+	opacity:0.5;
+}
+
+#mini_modal {
+	background:#fff;
+	border-radius:20px;
+	-moz-border-radius:20px;
+	z-index:100000000;
+	width:80%;
+	position:absolute;
+	padding:30px;
+	height:auto;
+	max-height:80%;
+	overflow-y:hidden;
+}
+
+	#mini_modal .close {
+		position:absolute;
+		top:10px;
+		right:10px;
+		text-decoration:underline;
+	}
+
+	#mini_modal .content {
+		position:relative;
+		height:100%;
+	}
+
+	#mini_modal .tab_choice { margin-top:-31px;}
