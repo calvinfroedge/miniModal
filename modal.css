@@ -16,8 +16,9 @@
 	position:absolute;
 	padding:30px;
 	height:auto;
-	max-height:80%;
+	max-height:90%;
 	overflow-y:hidden;
+	top:-10000px;
 }
 
 	#mini_modal .close {
