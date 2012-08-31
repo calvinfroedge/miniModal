@@ -153,7 +153,7 @@ $(document).ready(function(){
 		Modal.prototype.center = function (modal)
 		{
 			modal.css("position","absolute");
-			modal.css("top", Math.max(0, (($(window).height() - modal.outerHeight()) / 2)) + "px");
+			modal.css("top", Math.max(0, (($(window).height() - modal.outerHeight()) / 2) + $(document).scrollTop()) + "px");
 			modal.css("left", Math.max(0, (($(window).width() - modal.outerWidth()) / 2) + $(window).scrollLeft()) + "px");
 		}
 	})( jQuery );
