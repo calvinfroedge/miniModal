@@ -19,14 +19,21 @@ $(document).ready(function(){
 				
 				constructor: Modal,
 
-				launch: function(getUrl, callbacks){
-					
+				launch: function(data, callbacks, type){
+
 					if(that.hooks.beforeLaunch) that.doHooks(that.hooks.beforeLaunch);
 
 					that.callbacks = callbacks;
-					that.url = getUrl;
 
-					that.getData(that, "load");
+					if(typeof type == "undefined") type = "get";
+
+					if(type == "get"){
+						that.url = data;
+						that.getData(that, "load");
+					}
+					else if(type == "content"){
+						that.load(that, data);
+					}
 
 					if(that.hooks.afterLaunch) that.doHooks(that.hooks.afterLaunch);
 				},
