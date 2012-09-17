@@ -1,8 +1,20 @@
 $(document).ready(function(){
 	(function($) {
-		$.miniModal = function(){
-			return new Modal();
+		var instances = [];
+
+		$.miniModal = function(instance){
+			if(!instance) {
+				return new Modal();
+			}
+			else {
+				if(!instances[instance]) {
+					instances[instance] = new Modal();
+				}
+             
+				return instances[instance];
+			}
 		};
+
 
 		function Modal(){
 
